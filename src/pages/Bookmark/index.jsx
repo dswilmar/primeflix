@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './style.css';
 
 function Bookmark() {
@@ -18,6 +19,7 @@ function Bookmark() {
 
         setMovies(filter);
         localStorage.setItem('@primeflix', JSON.stringify(filter));
+        toast.success('Filme removido da sua lista.');
     }
 
     return(
