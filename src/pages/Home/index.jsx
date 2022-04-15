@@ -10,7 +10,7 @@ function Home() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        async function loadFilmes() {
+        async function loadMovies() {
             const response = await api.get(`movie/now_playing`, {
                 params: {
                     api_key: process.env.REACT_APP_API_KEY,
@@ -23,7 +23,7 @@ function Home() {
             setIsLoading(false);
         }
 
-        loadFilmes();
+        loadMovies();
     }, []);
 
     if (isLoading) {
