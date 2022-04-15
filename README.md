@@ -5,7 +5,7 @@
 - Permite ao usuário visualizar detalhes do filmes em cartaz.
 - Permite ao usuário salvar uma lista personalizada de filmes que deseja assistir (Local Storage).
 
-## Como rodar
+## :fire: Como rodar
 
 Antes de rodar, você precisará criar uma conta e obter uma chave da API do The Movie Database.
 
