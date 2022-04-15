@@ -33,6 +33,19 @@ function Movie() {
         return () => {console.log('Componente desmontado')}
     }, [id, navigate]);
 
+    function saveMovie() {
+        const storageMovies = localStorage.getItem('@primeflix');
+        let moviesList = JSON.parse(storageMovies) || [];
+        const hasMovie = moviesList.some((item) => item.id === movie.id);
+        if (hasMovie) {
+            alert('Este filme já está na sua lista');
+            return;
+        }
+        moviesList.push(movie);
+        localStorage.setItem('@primeflix', JSON.stringify(moviesList));
+        alert('Filme salvo com sucesso');
+    }
+
     if (isLoading) {
         return(
             <div className="loading">
@@ -50,7 +63,7 @@ function Movie() {
             <strong>Avaliação: {movie.vote_average}/10</strong>
 
             <div className="actions">
-                <button>Salvar</button>                
+                <button onClick={saveMovie}>Salvar</button>                
             </div>
         </div>
     )

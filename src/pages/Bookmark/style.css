@@ -1,0 +1,44 @@
+.bookmark {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bookmark h1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.bookmark h4 {
+  font-size: 20px;
+}
+
+.bookmark ul {
+  width: 720px;
+  margin-top: 20px;
+}
+
+.bookmark ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.bookmark ul li img {
+  width: 50px;
+  border-radius: 2px;
+}
+
+.bookmark div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookmark div a {
+  text-decoration: none;
+  color: #116feb;
+}
