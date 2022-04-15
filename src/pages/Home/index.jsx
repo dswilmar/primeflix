@@ -35,18 +35,16 @@ function Home() {
     }
 
     return (
-        <div className="container">
-            <div className="movies-list">
-                { movies.map((movie) => {
-                    return (
-                        <article key={movie.id}>
-                            <h2>{movie.title}</h2>
-                            <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
-                            <Link to={`/filme/${movie.id}`}>Ver detalhes</Link>
-                        </article>
-                    )
-                }) }
-            </div>
+        <div className="movies-list">
+            { movies.map((movie) => {
+                return (
+                    <article key={movie.id}>
+                        <h2>{movie.title}</h2>
+                        <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+                        <Link to={`/filme/${movie.id}`}>Ver detalhes</Link>
+                    </article>
+                )
+            }) }
         </div>
     )
 }
